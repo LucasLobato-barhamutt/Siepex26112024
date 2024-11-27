@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li>
+                    <a class="navbar-link" href="#sobre">Sobre mim</a>
+                </li>
+                <li>
+                    <a class="navbar-link" href="">Experiências</a>
+                </li>
+                <li>
+                    <a class="navbar-link" href="">Contatos</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="intro">
+            <div>
+                <h1 class="intro-titulo">Ian Lucas L.B</h1> 
+                <p class="intro-texto">
+                    Sou estudante de Ciências da Computação. 
+                    Atualmente estou no 3° semestre da faculdade,
+                    mas já desenvolvo projetos principalmente no que diz respeito ao backEnd,
+                    tenho também qualificações na área de redes pela Cisco Networking Academy
+                    bem como demais cursos de programação e tecnologia.
+                </p>              
+            </div>
+            <img src="/assets/iam.jpeg" 
+            alt="Imagem do Proprietario"
+            width="260"
+            height="400"
+            class="foto">
+        </section>
+        <div class="divisor"></div>
+        <section class="sobre" id="sobre">
+            <h2 class="sobre-titulo">Sobre Mim</h2>
+            <div class="sobre-conteudo">
+                <img src="/assets/hats.webp" 
+                alt="Desenho dos hats"
+                width="300"
+                height="200"
+                class="foto">
+                <p class="sobre-texto">
+                    Sempre gostei de resolver problemas de tecnologia para escapar da ociosidade.
+                    Minha curiosidade me leva a mergulhar mais e mais em novas ferramentas e tecnologias
+                    que expandiram meus horizontes. Minha paixão me levou ao curso de Ciências da computação
+                    o qual eu faço parte no campus IFPA de Ananindeua. Espero encontrar boas oportunidade de superar
+                    os mais variados desafios e mergulhar cada vez mais fundo nos conhecimentos de minha área.
+                </p>
+            </div>
+        </section>
+        <div class="divisor"></div>
+        <section class="exp" id="exp">
+            <h2 class="exp-titulo">Experiências</h2>
+                    <div class="exp-conteudo">
+                        <p class="exp-periodo">2024.02</p>
+                
+                        <div style="max-width: 36rem;">
+                            <h5 class="exp-func">
+                                Palestrante - <span class="exp-emp">IFPA</span>
+                            </h5>
+                            <p class="exp-descr">
+                                Trabalhei como monitor ajudando estudantes a resolver problemas de lógica de programação 
+                                e desenvolvendo pequenos projetos em Python e Java. Esta experiência me permitiu aprimorar 
+                                minhas habilidades de comunicação e mentoria.
+                            </p>
+                            <div class="exp-tech-list">
+                                <span class="exp-tech-item">html</span>
+                                <span class="exp-tech-item">css</span>
+                            </div>
+                        </div>
+                    </div>
+        </section>
+    </main>
+</body>
+</html>
+<script>
+    document.querySelectorAll('.navbar-link').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
